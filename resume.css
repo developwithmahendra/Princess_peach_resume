@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+/* ==========================================
+   1. Global Setup
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(123, 64, 242);
+  font-family: "Poppins", sans-serif;
+  color: white;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.page-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+
+/* ==========================================
+   Header Title
+   ========================================== */
+.title {
+  background: linear-gradient(135deg, #6a11cb, oklab(75.669% 0.10708 -0.12918 / 0.5));
+  color: whitesmoke;
+  text-align: center;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
+  font-weight: 900;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  text-shadow: 10px 9px 10px rgba(0, 0, 0, 0.3);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* ==========================================
+   Slide In Up Keyframes
+   ========================================== */
+@keyframes slideInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Class to apply animation manually to any element */
+.slide-in-up {
+  animation: slideInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* ==========================================
+   Glassmorphism Reusable Style
+   ========================================== */
+.glass {
+  background: linear-gradient(135deg, #6a11cb, rgba(37, 117, 252, 0.5));
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 40px;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Sabhi glass boxes par animation */
+  animation: slideInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.glass:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================
+   Hero Section
+   ========================================== */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.hero-text .h1, 
+.hero-text .h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 65px;
+  font-weight: 900;
+  line-height: 1.1;
+  filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.5));
+}
+.hero-text .h1{
+  padding-left: 26px;
+}
+.hero-text .h2{
+  padding-left: 185px;
+}
+.photo img {
+  width: 360px;
+  height: auto;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+}
+
+/* ==========================================
+   Introduction
+   ========================================== */
+.introduction {
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 22px;
+  box-shadow: 0 4px 10px rgba(52, 45, 45, 0.5);
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+  line-height: 1.7;
+  
+  /* Slide In Up Animation */
+  animation: slideInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* ==========================================
+   Row Layouts & Images
+   ========================================== */
+.section-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.section-row.align-center {
+  align-items: center;
+}
+
+.intro1 img, 
+.talespic img, 
+.castle img {
+  width: 380px;
+  height: auto;
+  border-radius: 15px;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+  
+  /* Images slide in up */
+  animation: slideInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.castleintro {
+  flex: 1;
+  font-family: "Lora", serif;
+  font-size: 20px;
+}
+
+.castleintro h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.castleintro ul {
+  padding-left: 25px;
+  line-height: 1.9;
+}
+
+.tales p {
+  font-family: "Lora", serif;
+  font-size: 22px;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.blackglass {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #ffffff1a;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 35px;
+  
+  /* Blackglass box slide in up */
+  animation: slideInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* ==========================================
+   Skills Section 
+   ========================================== */
+.skills-title {
+  background: linear-gradient(135deg, #6010b4, oklab(90.271% 0.00681 -0.00789 / 0.5));
+  color: whitesmoke;
+  text-align: center;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
+  font-family: "Lora", serif;
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 35px;
+  text-shadow: 10px 9px 10px rgba(0, 0, 0, 0.3);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 15px 0;
+  margin-bottom: 40px;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.skill-row.row-reverse {
+  flex-direction: row;
+}
+
+.skill-img-box {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.skill-img-box img {
+  width: 180px;
+  height: auto;
+  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.7));
+}
+
+.skill-pill {
+  flex: 1;
+  max-width: 650px;
+  padding: 20px 30px;
+  font-family: "Lora", serif;
+  font-size: 24px;
+  color: #FAF9F6;
+  text-align: center;
+  border-radius: 35px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease;
+  
+  /* Skill pills slide in up */
+  animation: slideInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.skill-pill:hover {
+  transform: scale(1.03);
+}
+
+.blue1 { background: linear-gradient(135deg, #000000, #6a11cb); }
+.glass4 { background: linear-gradient(135deg, #6a11cb, rgb(4,5,39)); }
+.glass5 { background: linear-gradient(135deg, #000000, #6a11cb); }
+.glass6 { background: linear-gradient(135deg, #6a11cb, rgb(4,5,39)); }
+
+/* ==========================================
+   Castle Box (Glass Style)
+   ========================================== */
+.box {
+  flex: 1;
+  font-size: 22px;
+  padding: 35px;
+  line-height: 1.7;
+  
+  /* Castle box slide in up */
+  animation: slideInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.box h2 {
+  font-size: 34px;
+  margin-bottom: 15px;
+  color: whitesmoke;
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+.footer {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-top: 3px solid #6a11cb;
+  margin-top: 60px;
+}
+
+.footer h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  font-size: 20px;
+}
+
+.copyright {
+  margin-top: 30px;
+  font-size: 16px !important;
+  font-weight: bold;
+  opacity: 0.8;
+}
